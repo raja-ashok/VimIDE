@@ -4,7 +4,7 @@ VIM_ROOT_PATH=~/.vim
 VIMRC=~/.vimrc
 VIMRC_CUR=./vimrc
 
-PATHOGEN_PKG_DIR=./vim-pathogen/autoload
+PATHOGEN_PKG_DIR=./pathogen/autoload
 PATHOGEN_PATH=~/.vim/autoload
 PATHOGEN=pathogen.vim
 
