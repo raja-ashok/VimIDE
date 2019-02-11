@@ -1,0 +1,52 @@
+#!/bin/bash
+
+CSCOPE_DIR="$PWD/cscope"
+
+echo_usage()
+{
+    echo "Usage: $0 gen|reset [folder]"
+    exit -1
+}
+
+gen()
+{
+    FOLDER="$PWD"
+    if [ $# -gt 0 ]; then
+        FOLDER="$1"
+    fi
+
+    if [ ! -d "$CSCOPE_DIR" ]; then
+    mkdir "$CSCOPE_DIR"
+    fi
+
+    echo "Finding files on $FOLDER ..."
+    find "$FOLDER" -name '*.[ch]' \
+    -o -name '*.java' \
+    -o -name '*properties' \
+    -o -name '*.cpp' \
+    -o -name '*.cc' \
+    -o -name '*.hpp' \
+    -o -name '*.py' \
+    -o -name '*.php' >> "$CSCOPE_DIR/cscope.files"
+
+    echo "Adding files to cscope db: $PWD/cscope.db ..."
+    cscope -b -i "$CSCOPE_DIR/cscope.files"
+
+    export CSCOPE_DB="$PWD/cscope.out"
+    echo "Exported CSCOPE_DB to: '$CSCOPE_DB'"
+}
+
+reset()
+{
+    if [ -f "$CSCOPE_DIR/cscope.files" ]; then
+        echo "" > "$CSCOPE_DIR/cscope.files"
+        echo "Resetted cscope captured files"
+    fi
+}
+
+if [ $# -lt 1 ]; then
+    echo_usage
+fi
+
+case $1 in
+    "gen")
