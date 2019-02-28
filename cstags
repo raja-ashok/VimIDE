@@ -4,7 +4,7 @@ CSCOPE_DIR="$PWD/cscope"
 
 echo_usage()
 {
-    echo "Usage: $0 gen|reset [folder]"
+    echo "Usage: $0 gen|regen|reset [folder]"
     exit -1
 }
 
@@ -50,3 +50,17 @@ fi
 
 case $1 in
     "gen")
+        shift
+        gen $*
+        ;;
+    "reset")
+        reset
+        ;;
+    "regen")
+        reset
+        gen
+        ;;
+    *)
+        echo_usage
+        ;;
+esac
