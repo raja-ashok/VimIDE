@@ -24,3 +24,5 @@ let g:NERDTreeWinPos = "right"
 " s100 - Registers with more than 100 KB of text are skipped.
 " h - Disables search highlighting when Vim starts.
 
+" Keep a line mark for 100 characters
+:set cc=100
