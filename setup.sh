@@ -47,8 +47,16 @@ copy_cstags_2_bin()
     echo "Copied ${CSCOPETAGS} to ${HOME_LOC_BIN}"
 }
 
+install_required_apt_pkg()
+{
+    sudo apt install exuberant-ctags
+    sudo apt install vim-gui-common
+    sudo apt install vim-runtime
+}
+
 do_setup()
 {
+    install_required_apt_pkg
     create_home_loc_bin
     copy_pathogen
     copy_plugins
