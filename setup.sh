@@ -47,14 +47,6 @@ copy_cstags_2_bin()
     echo "Copied ${CSCOPETAGS} to ${HOME_LOC_BIN}"
 }
 
-install_required_apt_pkg()
-{
-    sudo apt install exuberant-ctags
-    sudo apt install cscope
-    sudo apt install vim-gui-common
-    sudo apt install vim-runtime
-}
-
 do_setup()
 {
     install_required_apt_pkg
