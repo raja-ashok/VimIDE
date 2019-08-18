@@ -26,3 +26,6 @@ let g:NERDTreeWinPos = "right"
 
 " Keep a line mark for 100 characters
 :set cc=100
+
+" Enable mouse
+:set mouse=a
