@@ -58,7 +58,8 @@ case $1 in
         ;;
     "regen")
         reset
-        gen
+        shift
+        gen $*
         ;;
     *)
         echo_usage
