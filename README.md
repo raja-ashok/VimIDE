@@ -4,9 +4,9 @@ holds Vim Plugins and script to ease the Vim Plugins setup.
 
 ## 1. Vim Plugins
 Below listed are the Vim Plugins added to make efficient IDE using Vim
-    [Pathogen](https://github.com/tpope/vim-pathogen)
-    [NERDTree](https://github.com/scrooloose/nerdtree)
-    [Taglist](https://github.com/vim-scripts/taglist.vim)
+- [Pathogen](https://github.com/tpope/vim-pathogen)
+- [NERDTree](https://github.com/scrooloose/nerdtree)
+- [Taglist](https://github.com/vim-scripts/taglist.vim)
 
 ## 2. Setup
 - Clone this project then execute the below commands
