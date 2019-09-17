@@ -16,7 +16,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " Open NERDTree always on right
 let g:NERDTreeWinPos = "right"
 
-:set viminfo='100,<1000,s100,h
+set viminfo='100,<1000,s100,h
 " Meaning
 " '100 - Marks will be remembered for the last 100 edited files.
 " <1000 - Limits the number of lines saved for each register to 1000 lines
@@ -24,10 +24,10 @@ let g:NERDTreeWinPos = "right"
 " h - Disables search highlighting when Vim starts.
 
 " Keep a line mark for 100 characters
-:set cc=100
+set cc=100
 
 " Enable mouse
-:set mouse=a
+set mouse=a
 
 " Highlight the current line and also <ctrl+h> to toggle it
 color desert
