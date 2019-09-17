@@ -10,9 +10,8 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-map <C-l> :TlistToggle<CR>
-
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-l> :TlistToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Open NERDTree always on right
 let g:NERDTreeWinPos = "right"
