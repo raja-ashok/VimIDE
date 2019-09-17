@@ -29,3 +29,9 @@ let g:NERDTreeWinPos = "right"
 
 " Enable mouse
 :set mouse=a
+
+" Highlight the current line and also <ctrl+h> to toggle it
+color desert
+set cursorline
+hi CursorLine term=bold cterm=bold
+nnoremap <C-h> :set cursorline!<CR>
