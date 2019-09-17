@@ -49,7 +49,6 @@ copy_cstags_2_bin()
 
 do_setup()
 {
-    install_required_apt_pkg
     create_home_loc_bin
     copy_pathogen
     copy_plugins
