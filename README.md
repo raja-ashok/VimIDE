@@ -3,8 +3,10 @@ Scripts and dependent Vim Plugins to setup effective Vim IDE for Source Code bro
 holds Vim Plugins and script to ease the Vim Plugins setup.
 
 ## 1. Vim Plugins
-Below listed are the Vim Plugins added to make efficient IDE using Vim
-- [Pathogen](https://github.com/tpope/vim-pathogen)
+Below listed are the Vim Plugins added to make efficient IDE using Vim. All the plugins are
+configured using [Pathogen](https://github.com/tpope/vim-pathogen).
+- [Ctags](https://launchpad.net/ubuntu/+source/exuberant-ctags)
+- [Cscope](http://cscope.sourceforge.net/cscope_maps.vim)
 - [NERDTree](https://github.com/scrooloose/nerdtree)
 - [Taglist](https://github.com/vim-scripts/taglist.vim)
 - [Tabular](https://github.com/godlygeek/tabular)
@@ -22,6 +24,8 @@ Note: Here `setup.sh` overides `~/.vimrc` with `vimrc` file present in this proj
 it copies plugins listed on Section 1 to ~/.vim folder
 
 ## 3. Usage
+
+- `cursorline` is enabled by default to toggle it press `ctrl+h`.
 
 ### 3.1 Ctags Usage
 - `ctags -R .` generates tags of all supported format file's symbol to `tags` file.
