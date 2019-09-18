@@ -10,6 +10,8 @@ configured using [Pathogen](https://github.com/tpope/vim-pathogen).
 - [NERDTree](https://github.com/scrooloose/nerdtree)
 - [Taglist](https://github.com/vim-scripts/taglist.vim)
 - [Tabular](https://github.com/godlygeek/tabular)
+- [Vim-Airline](https://github.com/vim-airline/vim-airline) and
+[Vim-Airline-Themes](https://github.com/vim-airline/vim-airline-themes)
 
 ## 2. Setup
 - Clone this project then execute the below commands
@@ -49,3 +51,6 @@ of the symbol. This can be done by `:cs f s <symbol_name>`.
 - This can be done by selecting string on visual mode also.
 - For more info check [here](http://vimcasts.org/episodes/aligning-text-with-tabular-vim/).
 
+### 3.6 [Vim-Airline](https://github.com/vim-airline/vim-airline) and [Vim-Airline-Themes](https://github.com/vim-airline/vim-airline-themes) Usage
+- By defualt `term` theme is enabled.
+- There are various theme available on `vim-airline-themes/autoload/airline/themes`.
