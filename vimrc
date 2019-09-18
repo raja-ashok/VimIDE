@@ -34,3 +34,10 @@ color desert
 set cursorline
 hi CursorLine term=bold cterm=bold
 nnoremap <C-h> :set cursorline!<CR>
+
+" Vim-Airline and Vim-Airline-Themes configuration
+"let g:airline#extensions#tabline#enabled=1
+"let g:airline_powerline_fonts=1
+let g:airline_theme='hybrid'
+let g:hybrid_custom_term_colors=1
+let g:hybrid_reduced_contrast=1
