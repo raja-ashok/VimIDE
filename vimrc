@@ -2,6 +2,7 @@ set nu
 set hlsearch
 set expandtab ts=4 sw=4 ai smarttab
 
+" For makefile dont expand tab to blancspaces.
 autocmd FileType make setlocal noexpandtab 
 
 source ~/.vim/plugins/cscope_maps.vim
