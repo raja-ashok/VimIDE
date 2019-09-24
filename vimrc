@@ -35,6 +35,9 @@ color desert
 set cursorline
 hi CursorLine term=bold cterm=bold
 nnoremap <C-h> :set cursorline!<CR>
+" Change search highlight color
+hi Search guibg=yellow guifg=black
+hi Search cterm=None ctermbg=yellow ctermfg=black
 
 " Vim-Airline and Vim-Airline-Themes configuration
 "let g:airline#extensions#tabline#enabled=1
