@@ -10,27 +10,27 @@ echo_usage()
 
 gen()
 {
-    FOLDER="$PWD"
-    if [ $# -gt 0 ]; then
+    while [ $# -gt 0 ]
+    do
         FOLDER="$1"
-    fi
+        shift
 
-    if [ ! -d "$CSCOPE_DIR" ]; then
-    mkdir "$CSCOPE_DIR"
-    fi
+        if [ ! -d "$CSCOPE_DIR" ]; then
+        mkdir "$CSCOPE_DIR"
+        fi
 
-    echo "Finding files on $FOLDER ..."
-    find "$FOLDER" -name '*.[ch]' \
-    -o -name '*.java' \
-    -o -name '*properties' \
-    -o -name '*.cpp' \
-    -o -name '*.cc' \
-    -o -name '*.hpp' \
-    -o -name '*.py' \
-    -o -name '*.php' >> "$CSCOPE_DIR/cscope.files"
+        echo "Finding files on $FOLDER ..."
+        find "$FOLDER" -name '*.[ch]' \
+        -o -name '*.java' \
+        -o -name '*properties' \
+        -o -name '*.cpp' \
+        -o -name '*.cc' \
+        -o -name '*.hpp' \
+        -o -name '*.py' \
+        -o -name '*.php' >> "$CSCOPE_DIR/cscope.files"
 
-    echo "Adding files to cscope db: $PWD/cscope.db ..."
-    cscope -b -i "$CSCOPE_DIR/cscope.files"
+        cscope -b -i "$CSCOPE_DIR/cscope.files"
+    done
 
     export CSCOPE_DB="$PWD/cscope.out"
     echo "Exported CSCOPE_DB to: '$CSCOPE_DB'"
