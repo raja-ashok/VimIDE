@@ -2,11 +2,23 @@
 
 CSCOPE_DIR="$PWD/cscope"
 TAGSDIR=${CSCOPE_DIR}/cscope.dir
+
+# If argument is passed add as a directory for ctags and cscope generation
 if [ $# -ne 0 ]; then
+    mkdir -p ${CSCOPE_DIR}
     echo $* > ${TAGSDIR}
     echo "Adding [$*] to ${TAGSDIR}"
-else
-    DIRS=`cat ${TAGSDIR}`
-    ctags -R ${DIRS}
-    cstags regen ${DIRS}
 fi
+
+if [ -f ${TAGSDIR} ]; then
+    DIRS=`cat ${TAGSDIR}`
+else
+    DIRS='.'
+fi
+
+# Delete old ctags file
+if [ -f ./tags ]; then
+    rm -f ./tags
+fi
+ctags -R ${DIRS}
+cstags regen ${DIRS}
