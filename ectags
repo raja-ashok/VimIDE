@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CSCOPE_DIR="$PWD/cscope"
+TAGSDIR=${CSCOPE_DIR}/cscope.dir
+if [ $# -ne 0 ]; then
+    echo $* > ${TAGSDIR}
+    echo "Adding [$*] to ${TAGSDIR}"
+else
+    DIRS=`cat ${TAGSDIR}`
+    ctags -R ${DIRS}
+    cstags regen ${DIRS}
+fi
