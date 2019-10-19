@@ -4,6 +4,7 @@ VIM_ROOT_PATH=~/.vim
 VIMRC=~/.vimrc
 VIMRC_CUR=./vimrc
 CSCOPETAGS=cstags
+EXTENDED_CTAGS=ectags
 HOME_LOC_BIN=~/.local/bin
 
 PATHOGEN_PKG_DIR=./pathogen/autoload
@@ -41,10 +42,10 @@ create_home_loc_bin()
     fi
 }
 
-copy_cstags_2_bin()
+copy_bins()
 {
-    cp ${CSCOPETAGS} ${HOME_LOC_BIN}
-    echo "Copied ${CSCOPETAGS} to ${HOME_LOC_BIN}"
+    cp ${CSCOPETAGS} ${EXTENDED_CTAGS} ${HOME_LOC_BIN}
+    echo "Copied ${CSCOPETAGS} ${EXTENDED_CTAGS} to ${HOME_LOC_BIN}"
 }
 
 do_setup()
@@ -52,7 +53,7 @@ do_setup()
     create_home_loc_bin
     copy_pathogen
     copy_plugins
-    copy_cstags_2_bin
+    copy_bins
 }
 
 do_setup
