@@ -25,7 +25,7 @@ set viminfo='100,<1000,s100,h
 " h - Disables search highlighting when Vim starts.
 
 " Keep a line mark for 100 characters
-set cc=100
+set cc=80
 
 " Enable mouse
 set mouse=a
