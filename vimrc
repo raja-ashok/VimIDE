@@ -48,3 +48,5 @@ let g:hybrid_reduced_contrast=1
 
 " Shortcut for ectags execution
 nnoremap <C-k> :!ectags<CR><CR>
+
+set rtp+=~/.fzf
