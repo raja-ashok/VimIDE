@@ -13,24 +13,24 @@ PATHOGEN=pathogen.vim
 
 copy_pathogen()
 {
-    if [ ! -f ${PATHOGEN_PATH}/${PATHOGEN} ]; then
-        if [ ! -d ${PATHOGEN_PATH} ]; then
-            mkdir -p ${PATHOGEN_PATH}
-            echo "Created director ${PATHOGEN}"
-        fi
-        cp ${PATHOGEN_PKG_DIR}/${PATHOGEN} ${PATHOGEN_PATH}/
-        echo "Copied Pathogen ${PATHOGEN_PKG_DIR}/${PATHOGEN}"
+  if [ ! -f ${PATHOGEN_PATH}/${PATHOGEN} ]; then
+    if [ ! -d ${PATHOGEN_PATH} ]; then
+      mkdir -p ${PATHOGEN_PATH}
+      echo "Created director ${PATHOGEN}"
     fi
-    cp ${VIMRC_CUR} ${VIMRC}
-    echo "Copied vimrc file"
+    cp ${PATHOGEN_PKG_DIR}/${PATHOGEN} ${PATHOGEN_PATH}/
+    echo "Copied Pathogen ${PATHOGEN_PKG_DIR}/${PATHOGEN}"
+  fi
+  cp ${VIMRC_CUR} ${VIMRC}
+  echo "Copied vimrc file"
 }
 
 copy_plugins()
 {
-    cp ./bundle ${VIM_ROOT_PATH}/ -rf
-    cp ./plugins ${VIM_ROOT_PATH}/ -rf
-    echo "Copied plugins"
-    ls ./bundle
+  cp ./bundle ${VIM_ROOT_PATH}/ -rf
+  cp ./plugins ${VIM_ROOT_PATH}/ -rf
+  echo "Copied plugins"
+  ls ./bundle
 }
 
 create_home_loc_bin()
@@ -50,10 +50,10 @@ copy_bins()
 
 do_setup()
 {
-    create_home_loc_bin
-    copy_pathogen
-    copy_plugins
-    copy_bins
+  create_home_loc_bin
+  copy_pathogen
+  copy_plugins
+  copy_bins
 }
 
 do_setup
