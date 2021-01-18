@@ -35,17 +35,17 @@ copy_plugins()
 
 create_home_loc_bin()
 {
-    if [ ! -d ${HOME_LOC_BIN} ]; then
-        mkdir -p ${HOME_LOC_BIN}
-        echo "PATH=${HOME_LOC_BIN}:\$PATH" >> rc
-        echo "Created ${HOME_LOC_BIN}"
-    fi
+  if [ ! -d ${HOME_LOC_BIN} ]; then
+    mkdir -p ${HOME_LOC_BIN}
+    echo "PATH=${HOME_LOC_BIN}:\$PATH" >> ~/.bashrc
+    echo "Created ${HOME_LOC_BIN}"
+  fi
 }
 
 copy_bins()
 {
-    cp ${CSCOPETAGS} ${EXTENDED_CTAGS} ${HOME_LOC_BIN}
-    echo "Copied ${CSCOPETAGS} ${EXTENDED_CTAGS} to ${HOME_LOC_BIN}"
+  cp ${CSCOPETAGS} ${EXTENDED_CTAGS} ${HOME_LOC_BIN}
+  echo "Copied ${CSCOPETAGS} ${EXTENDED_CTAGS} to ${HOME_LOC_BIN}"
 }
 
 do_setup()
