@@ -29,6 +29,7 @@ git clone --depth 1 https://github.com/junegunn/fzf ~/.fzf
 cd VimIDE
 ./install_required_pkg.sh
 ./setup.sh
+. ~/.bashrc
 ```
 - `sudo` permission is needed to execute `install_required_pkg.sh`.
 
