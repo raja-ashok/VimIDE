@@ -50,3 +50,7 @@ let g:hybrid_reduced_contrast=1
 nnoremap <C-k> :!ectags<CR><CR>
 
 set rtp+=~/.fzf
+
+" To display tabs as character (>----)
+set list
+set listchars=tab:>-
