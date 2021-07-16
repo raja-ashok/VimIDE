@@ -1,6 +1,11 @@
 set nu
 set hlsearch
+"set expandtab ts=2 sw=2 ai smarttab
 set expandtab ts=4 sw=4 ai smarttab
+"set expandtab ts=8 sw=8 ai smarttab
+"set ts=2 sw=2 ai smarttab
+"set ts=4 sw=4 ai smarttab
+"set ts=8 sw=8 ai smarttab
 
 " For makefile dont expand tab to blancspaces.
 autocmd FileType make setlocal noexpandtab 
@@ -46,7 +51,7 @@ let g:airline_theme='term'
 let g:hybrid_custom_term_colors=1
 let g:hybrid_reduced_contrast=1
 
-" Shortcut for ectags execution
+" Shortcut for ectags (ctags and cscope update) execution
 nnoremap <C-k> :!ectags<CR><CR>
 
 set rtp+=~/.fzf
@@ -54,3 +59,14 @@ set rtp+=~/.fzf
 " To display tabs as character (>----)
 set list
 set listchars=tab:>-
+
+" Highlight unwanted spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" Smartly detect ctags in parent directories
+set tags=tags;
