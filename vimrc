@@ -8,7 +8,7 @@ set expandtab ts=4 sw=4 ai smarttab
 "set ts=8 sw=8 ai smarttab
 
 " For makefile dont expand tab to blancspaces.
-autocmd FileType make setlocal noexpandtab 
+autocmd FileType make setlocal noexpandtab
 
 source ~/.vim/plugins/cscope_maps.vim
 
@@ -40,6 +40,9 @@ color desert
 set cursorline
 hi CursorLine term=bold cterm=bold
 nnoremap <C-h> :set cursorline!<CR>
+" Highlight the current line's linenumber section with background grey
+hi CursorLineNR ctermbg=grey
+
 " Change search highlight color
 hi Search guibg=yellow guifg=black
 hi Search cterm=None ctermbg=yellow ctermfg=black
