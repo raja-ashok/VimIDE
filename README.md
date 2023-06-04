@@ -12,18 +12,9 @@ configured using [Pathogen](https://github.com/tpope/vim-pathogen).
 - [Tabular](https://github.com/godlygeek/tabular)
 - [Vim-Airline](https://github.com/vim-airline/vim-airline) and
 [Vim-Airline-Themes](https://github.com/vim-airline/vim-airline-themes)
-- [fzf.vim](https://github.com/junegunn/fzf.vim)
 
 ## 2. Setup
-### 2.1 Install Prerequisites
-- Install [fzf](https://github.com/junegunn/fzf)
-```
-git clone --depth 1 https://github.com/junegunn/fzf ~/.fzf
-~/.fzf/install
-. ~/.bashrc
-```
-
-### 2.2 Setup VimIDE
+### 2.1 Setup VimIDE
 - Clone this project then execute the below commands
 ```
 cd VimIDE

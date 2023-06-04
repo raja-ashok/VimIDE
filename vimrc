@@ -57,8 +57,6 @@ let g:hybrid_reduced_contrast=1
 " Shortcut for ectags (ctags and cscope update) execution
 nnoremap <C-k> :!ectags<CR><CR>
 
-set rtp+=~/.fzf
-
 " To display tabs as character (>----)
 set list
 set listchars=tab:>-
