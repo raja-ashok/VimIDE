@@ -2,10 +2,10 @@
 
 install_required_apt_pkg()
 {
-  apt install exuberant-ctags
-  apt install cscope
-  apt install vim-gui-common
-  apt install vim-runtime
+  apt install exuberant-ctags -y
+  apt install cscope -y
+  apt install vim-gui-common -y
+  apt install vim-runtime -y
 }
 
 install_required_apt_pkg
