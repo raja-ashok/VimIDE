@@ -71,3 +71,17 @@ autocmd BufWinLeave * call clearmatches()
 
 " Smartly detect ctags in parent directories
 set tags=tags;
+
+set ic
+"set noic
+
+" Highlight error and warning on *.log and *.txt files
+" Enable syntax highlighting for .log and .txt files
+autocmd BufReadPost *.log,*.txt syntax enable
+" Define highlight groups
+autocmd BufReadPost *.log,*.txt highlight MyError ctermfg=Red guifg=Red
+autocmd BufReadPost *.log,*.txt highlight MyWarning ctermfg=Yellow guifg=Orange
+" Match lines containing 'error' or 'warning' (case-insensitive, whole line)
+autocmd BufReadPost *.log,*.txt syntax match MyError /^.*\c\(error\).*$/
+autocmd BufReadPost *.log,*.txt syntax match MyWarning /^.*\c\(warning\).*$/
+
